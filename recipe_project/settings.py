@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'agile-depths-27304-c2c05344f63c.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'shrouded-harbor-70828-55c317b38622.herokuapp.com']
 
 
 
