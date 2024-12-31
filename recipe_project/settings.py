@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'shrouded-harbor-70828-55c317b38622.herokuapp.com', 'shareifs-recipes']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'shrouded-harbor-70828-55c317b38622.herokuapp.com', 'shareifs-recipes-7d2eed0a44fa.herokuapp.com']
 
 
 
