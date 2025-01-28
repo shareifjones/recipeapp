@@ -20,12 +20,16 @@ from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import login_view, success_view
+from django.contrib.auth import views as auth_views
+from . import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls')),
     path('login/', login_view, name='login'),
-    path('logout/', success_view, name='success')
+    path('logout/', success_view, name='success'),
+    path('signup/', views.signup, name='signup')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
