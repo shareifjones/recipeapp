@@ -4,7 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm 
 
 from django.shortcuts import render, redirect  
-from django.contrib.auth.forms import UserCreationForm
+from recipes.forms import CustomUserCreationForm
+
 from django.contrib import messages
 
 
@@ -53,13 +54,11 @@ def success_view(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)  # Use the custom form
         if form.is_valid():
             user = form.save()
-            # Utilize the user variable to suppress the warning
-            print(f"New user created: {user.username}")
             messages.success(request, "Your account has been created successfully! Please log in.")
             return redirect('login')  # Redirect to login page after signup
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()  # Use the custom form
     return render(request, 'auth/signup.html', {'form': form})
